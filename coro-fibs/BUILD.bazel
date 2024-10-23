@@ -1,0 +1,16 @@
+TNAME = "coro-fibs"
+
+cc_binary(
+  name = TNAME,
+  srcs = ["corofibs.cc", "sumfib_module.cc", "corofibs.h"],
+  includes = ["corofibs.h"],
+  copts = ["-std=c++20"],
+  deps = ["@cppbenchmark//:cppbenchmark"]
+)
+
+genrule(
+  name = "TEST_$(TNAME)",
+  outs = ["$(TNAME).csv"],
+  cmd = "./$(TNAME) -q -o csv > $(CSVS)/$(TNAME).csv"
+)
+

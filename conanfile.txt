@@ -1,7 +1,10 @@
 [requires]
 cppbenchmark/cci.20201029
+
 [generators]
-CMakeDeps
-CMakeToolchain
+BazelDeps
+BazelToolchain
+
 [layout]
-cmake_layout
+bazel_layout
+
