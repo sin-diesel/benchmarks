@@ -2,7 +2,8 @@ TNAME = "coro-fibs"
 
 cc_binary(
   name = TNAME,
-  srcs = ["corofibs.cc", "sumfib_module.cc", "corofibs.h"],
+  srcs = ["corofibs.cc", "sumfib_module.cc"],
+  includes = ["."],
   copts = ["-std=c++20"],
   deps = ["@cppbenchmark//:cppbenchmark"]
 )

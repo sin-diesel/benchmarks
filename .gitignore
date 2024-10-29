@@ -1,5 +1,7 @@
 CMakeUserPresets.json
 build
 bazel-*
+conan/
 .venv/
 __pycache__/
+
